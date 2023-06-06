@@ -1,6 +1,9 @@
 Otwórz project backend:
+
     1: Wejdź do pliku main/resources/application.properties
+
     2: Zmień zmienne w zależności od sposobu łączenia do bazy danych oraz nie zapomnij zmienić nazwy bazy danych
+    
     3: Przejdź w konsoli do folderu /backend/avsystem
     4: Wpisz komendę "./mvnw spring-boot:run" 
     5: W razie zmiany domyślnego portu, zaleca się zmianę adresu w pliku ElevatorController.java w linijce 19
