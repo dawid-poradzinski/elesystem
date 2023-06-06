@@ -15,7 +15,7 @@ Otwórz project frontend:
     3: Uruchom komendę npm start
 
 
-    <!-- Algorytm wysyłania wind -->
+<-- Algorytm wysyłania wind -->
 
     Wysyłka w środku windy:
 
