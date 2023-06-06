@@ -7,11 +7,11 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Main from './Main';
-import Menu from './Menu';
-import CheckElevatorStatus from './CheckElevatorStatus';
-import CallElevator from './CallElevator';
-import SymulateElevators from './SymulateElevators';
+import Main from './mainComponents/Main';
+import Menu from './mainComponents/Menu';
+import CheckElevatorStatus from './mainComponents/CheckElevatorStatus';
+import CallElevator from './middleComponents/CallElevator';
+import SymulateElevators from './middleComponents/SymulateElevators';
 
 const router = createBrowserRouter([
   {

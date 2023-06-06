@@ -1,9 +1,9 @@
 import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
 
 import { useEffect, useState } from "react";
-import { allElevators, changeQueue} from "./Endpoints";
+import { allElevators, changeQueue} from "../Endpoints";
 import axios from "axios";
-import CallSingleElevator from "./CallSingleElevator";
+import CallSingleElevator from "../smallComponents/CallSingleElevator";
 
 function InElevator() {
 

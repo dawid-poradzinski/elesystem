@@ -139,9 +139,24 @@ public class ElevatorService {
         return elevatorsWithFloorInQueue;
     }
 // 
+    public List<Elevator> findElevatorsByNotActualFloor(List<Elevator> elevators, Long floor) {
+
+        List<Elevator> notFloor = new ArrayList<>();
+
+        for (Elevator elevator : elevators) {
+            if(elevator.getActualFloor() != floor) {
+                notFloor.add(elevator);
+            }
+        }
+
+        return notFloor;
+    }
+
     public Elevator callElevatorOnFloor(Long floor, Boolean direction) {
 
         List<Elevator> elevators = findElevatorsByNotFloorInQueue(floor);
+
+        elevators = findElevatorsByNotActualFloor(elevators, floor);
 
         if(elevators.isEmpty()) {
             return null;
@@ -179,7 +194,14 @@ public class ElevatorService {
     public void saveAfterChange(Elevator elevator, Long floor) {
         if(!elevator.getQueue().isEmpty()) {
             elevator.getQueue().add(floor);
+
+            if((elevator.getDirection() && elevator.getNextFloor() > floor && floor > elevator.getActualFloor()) || (!elevator.getDirection() && elevator.getNextFloor() < floor && floor < elevator.getActualFloor())) {
+                elevator.setNextFloor(floor);
+            }
+
         } else {
+
+            elevator.setNextFloor(floor);
 
             if(floor - elevator.getActualFloor() > 0) {
                 elevator.setDirection(true);
@@ -192,6 +214,7 @@ public class ElevatorService {
             set.add(floor);
 
             elevator.setQueue(set);
+            
         }
 
         elevatorRepository.save(elevator);

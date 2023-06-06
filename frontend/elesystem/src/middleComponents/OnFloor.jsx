@@ -1,15 +1,14 @@
 import { IconArrowDown, IconArrowNarrowLeft, IconArrowNarrowRight, IconArrowUp } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { elevatorsOnFloor, callOnFloor, findByFloorInQueue} from "./Endpoints";
-import SingleElevatorOnFloor from "./singleElevatorOnFloor";
+import { elevatorsOnFloor, callOnFloor, findByFloorInQueue} from "../Endpoints";
+import SingleElevatorOnFloor from "../smallComponents/singleElevatorOnFloor";
 
 function OnFloor() {
 
     const [elevators, setElevators] = useState([]);
     const [elevatorsOnWay, setElevatorsOnWay] = useState([]);
     const [selectedFloor, setSelectedFloor] = useState(0);
-    const [calledElevators, setCalledElevators] = useState([]);
 
     const getElevatorsOnCurrentFloor = () => {
         axios.post(elevatorsOnFloor + selectedFloor).then((response) => {
