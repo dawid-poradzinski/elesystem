@@ -1,8 +1,8 @@
 import { IconArrowLeft, IconArrowNarrowLeft, IconArrowNarrowRight, IconHelp } from "@tabler/icons-react";
 import { useState } from "react";
 import { Link, useOutletContext } from "react-router-dom";
-import { symulate } from "./Endpoints";
-import Help from "./Help";
+import { symulate } from "../Endpoints";
+import Help from "../Help";
 import axios from "axios";
 
 function SymulateElevators() {

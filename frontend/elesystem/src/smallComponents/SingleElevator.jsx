@@ -1,5 +1,5 @@
 import { IconCirclePlus, IconClipboard, IconEraser, IconPencil } from "@tabler/icons-react";
-import { addElevator, deleteElevator } from "./Endpoints";
+import { addElevator, deleteElevator } from "../Endpoints";
 import ChangeElevator from "./ChangeElevator";
 import axios from "axios";
 import { useEffect, useState } from "react";

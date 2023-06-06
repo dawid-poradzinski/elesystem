@@ -3,7 +3,7 @@ import { Link, useOutletContext } from "react-router-dom";
 import InElevator from "./InElevator";
 import { useState } from "react";
 import OnFloor from "./OnFloor";
-import Help from "./Help";
+import Help from "../Help";
 
 function CallElevator() {
 

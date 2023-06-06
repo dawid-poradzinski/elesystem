@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import SingleElevator from "./SingleElevator";
+import SingleElevator from "../smallComponents/SingleElevator";
 import axios from "axios";
-import { allElevators} from "./Endpoints";
+import { allElevators} from "../Endpoints";
 import { IconArrowLeft, IconHelp } from "@tabler/icons-react";
 import { Link, useOutletContext } from "react-router-dom";
-import Help from "./Help";
+import Help from "../Help";
 
 const CheckElevatorStatus = () => {
 

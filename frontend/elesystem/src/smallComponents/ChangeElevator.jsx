@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useRef } from "react";
-import { changeElevator} from "./Endpoints";
+import { changeElevator} from "../Endpoints";
 
 const ChangeElevator = (props) => {
 
