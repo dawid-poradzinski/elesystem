@@ -1,3 +1,5 @@
+Projekt zawierający błędy z powodu pracy pierwszy raz z technologią frontend
+
 Otwórz project backend:
 
     1: Wejdź do pliku main/resources/application.properties
