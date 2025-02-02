@@ -40,6 +40,7 @@ public class ElevatorController {
 
     @PutMapping("/change")
     public ResponseEntity<Elevator> changeElevator(@RequestBody Elevator elevator) {
+        
         elevator = elevatorService.changeElevator(elevator);
 
         if(elevator != null) {

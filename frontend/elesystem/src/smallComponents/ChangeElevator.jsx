@@ -27,6 +27,7 @@ const ChangeElevator = (props) => {
             if(!isNaN(next)){
                 if((next < 0 || next > 5)) {
                     alert("Wybierz następne piętro w zakresie 0-5");
+                    return;
                 }
                 toChangeElevator.nextFloor = next;
 
